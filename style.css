@@ -55,3 +55,18 @@ body {
   padding-left: 20%;
   padding-top: 2%;
 }
+
+/* Page welcome text */
+.welcome-text{
+  position: absolute;
+  margin: 20% 30%;
+  text-align: center;
+}
+
+.welcome-text h1{
+  tet-align: center;
+  color: #fff;
+  text-translation: uppercase;
+  font-size: 80px;
+
+}
