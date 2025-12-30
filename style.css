@@ -17,9 +17,11 @@ charset "utf-8";
 }
 
 body {
-  background-color: linear-gradient(rgba(0,0,0,0.7,rgba(0,0,0,0.7)),hsl(44, 100, 98);
-  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    hsl(44, 100%, 98%);
   background-size: cover;
   background-position: center center;
+  height: 100vh;
   position: relative;
 }
