@@ -104,7 +104,7 @@ footer {
     position: relative;
     width: 300px;                  /* Adjust width if needed */
     height: 48px;
-    margin-left: 40px;             /* Space from News link */
+    margin-left: 15px;             /* Space from News link */
 }
 
 .search-bar-container .search-icon {
