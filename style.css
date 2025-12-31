@@ -1,7 +1,7 @@
 /*
 Page layout for index.html
 Author: NaDari Cole
-Date: 12/30/2025
+Date: 12/31/2025
 Code Type: css
 Filename: style.css
 */
@@ -11,26 +11,24 @@ Filename: style.css
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Nunito", sans-serif;
 }
 
 body {
-    background: hsl(44, 100%, 98%); /* Light beige */
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh; /* Changed to min-height so content can expand beyond viewport if needed */
+    background: hsl(44, 100%, 98%); /* Light beige background */
+    min-height: 100vh;
     position: relative;
 }
 
 /* Header/Navigation */
 header.header {
-    background-color: #a2b850; /* Green background */
-    padding: 25px 50px 25px 0; /* Increased top/bottom to 25px for taller "box" (adds ~20px total height) */
+    background-color: #a2b850; /* Your custom green */
+    padding: 25px 50px 25px 0; /* Taller header, no left padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -41,20 +39,21 @@ header.header {
     bottom: 0;
     display: flex;
     align-items: center;
-    background-color: #a2b850; /* Fixed typo (removed extra #) – now matches header green */
-    padding-left: 10px; /* Reduced for less gap; set to 0 if you want fully flush */
+    background-color: #a2b850; /* Matches header exactly */
+    padding-left: 10px; /* Small gap from edge – change to 0 if you want fully flush */
 }
 
 .logo img {
-    height: 100px; /* Larger size – adjust to 110px or 120px if too small; this should fit your "red square" intent */
+    height: 100px;         /* Adjust if you want it larger/smaller (e.g., 110px) */
     width: auto;
-    max-height: 100%; /* Prevents overflow */
+    max-height: 100%;
+    margin-top: 8px;       /* Lowers the logo slightly so the top isn't cut off */
 }
 
-/* Nav links */
+/* Navigation links */
 .nav-area {
     list-style: none;
-    margin: 0 auto;
+    margin: 0 auto;        /* Perfectly centers the nav in the remaining space */
     padding: 0;
     display: flex;
     align-items: center;
@@ -77,11 +76,11 @@ header.header {
     color: #ffac93; /* Your custom light pink hover */
 }
 
-/* Article styling with bottom space */
+/* Main content */
 article {
     max-width: 800px;
     margin: 50px auto;
-    padding: 0 20px 80px; /* Added 80px bottom padding for empty space after last paragraph – adjust as needed */
+    padding: 0 20px 100px; /* Extra bottom padding for breathing room after last paragraph */
     text-align: left;
     line-height: 1.6;
 }
@@ -95,7 +94,7 @@ article p {
     margin-bottom: 25px;
 }
 
-/* Optional: Style for empty footer (adds more bottom space if needed) */
+/* Optional footer space */
 footer {
-    height: 50px; /* Extra buffer at very bottom */
+    height: 50px; /* Extra buffer at the very bottom if needed */
 }
