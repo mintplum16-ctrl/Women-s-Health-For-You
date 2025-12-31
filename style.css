@@ -24,36 +24,33 @@ body {
 /* Header/Navigation */
 header.header {
     background-color: #a2b850; /* Your custom green */
-    padding: 25px 50px 25px 0; /* Taller header, no left padding */
+    padding: 25px 50px; /* Equal padding left/right, taller header */
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    position: relative;
 }
 
 .logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
-    background-color: #a2b850; /* Matches header exactly */
-    padding-left: 10px; /* Small gap from edge – change to 0 if you want fully flush */
 }
 
 .logo img {
-    height: 100px;         /* Adjust if you want it larger/smaller (e.g., 110px) */
+    height: 100px; /* Adjust if needed */
     width: auto;
-    max-height: 100%;
-    margin-top: 8px;       /* Lowers the logo slightly so the top isn't cut off */
+}
+
+/* Nav centering wrapper */
+.nav-center {
+    flex: 1; /* Takes available space to center nav */
+    display: flex;
+    justify-content: center;
 }
 
 /* Navigation links */
 .nav-area {
     list-style: none;
-    margin: 0 auto;        /* Perfectly centers the nav in the remaining space */
     padding: 0;
     display: flex;
     align-items: center;
@@ -94,17 +91,16 @@ article p {
     margin-bottom: 25px;
 }
 
-/* footer space */
+/* Footer space */
 footer {
     height: 50px; /* Extra buffer at the very bottom */
 }
 
-/*  MINIMALIST SEARCH BAR */
+/* MINIMALIST SEARCH BAR */
 .search-bar-container {
     position: relative;
-    width: 300px;                  /* Adjust width if needed */
+    width: 300px; /* Adjust width if needed */
     height: 48px;
-    margin-left: 15px;             /* Space from News link */
 }
 
 .search-bar-container .search-icon {
@@ -113,7 +109,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #a2b850;                /* Green to match header */
+    color: #a2b850; /* Green to match header */
     pointer-events: none;
     z-index: 1;
 }
@@ -121,10 +117,10 @@ footer {
 .search-input {
     width: 100%;
     height: 100%;
-    padding: 0 50px 0 50px;        /* Space for icon left + clear button right */
+    padding: 0 50px 0 50px; /* Space for icon left + clear button right */
     border: 2px solid transparent;
-    border-radius: 50px;           /* Fully rounded pill */
-    background-color: #fff;        /* Clean white background */
+    border-radius: 50px; /* Fully rounded pill */
+    background-color: #fff; /* Clean white background */
     font-size: 16px;
     color: #333;
     outline: none;
@@ -138,7 +134,7 @@ footer {
 }
 
 .search-input:focus {
-    border-color: #ffac93;         /* Orange outline on focus */
+    border-color: #ffac93; /* Orange outline on focus */
     box-shadow: 0 6px 20px rgba(255, 172, 147, 0.3); /* Soft orange glow */
 }
 
@@ -163,6 +159,6 @@ footer {
 }
 
 .search-clear:hover {
-    color: #ff643b;                /* Brighter orange on hover */
+    color: #ff643b; /* Brighter orange on hover */
     transform: translateY(-50%) rotate(90deg) scale(1.1);
 }
