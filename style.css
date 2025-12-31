@@ -34,11 +34,14 @@ header.header {
 .logo {
     display: flex;
     align-items: center;
+    background-color: transparent; /* Ensures logo transparency works */
 }
 
 .logo img {
-    height: 50px; /* Adjust if needed */
+    height: 150px; /* Your current logo size */
     width: auto;
+    background: transparent; /* Extra safety for transparency */
+    display: block;
 }
 
 /* Nav centering wrapper */
@@ -70,13 +73,13 @@ header.header {
 }
 
 .nav-area li a:hover {
-    color: #ffac93; /* Your custom light pink hover */
+    color: #ffac93; /* Your custom light pink/orange hover */
 }
 
 /* MINIMALIST SEARCH BAR */
 .search-bar-container {
     position: relative;
-    width: 300px; /* Adjust width if needed */
+    width: 300px;
     height: 48px;
 }
 
@@ -86,7 +89,7 @@ header.header {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #a2b850; /* Green to match header */
+    color: #a2b850;
     pointer-events: none;
     z-index: 1;
 }
@@ -94,10 +97,10 @@ header.header {
 .search-input {
     width: 100%;
     height: 100%;
-    padding: 0 50px 0 50px; /* Space for icon left + clear button right */
+    padding: 0 50px 0 50px;
     border: 2px solid transparent;
-    border-radius: 50px; /* Fully rounded pill */
-    background-color: #fff; /* Clean white background */
+    border-radius: 50px;
+    background-color: #fff;
     font-size: 16px;
     color: #333;
     outline: none;
@@ -111,8 +114,8 @@ header.header {
 }
 
 .search-input:focus {
-    border-color: #ffac93; /* Orange outline on focus */
-    box-shadow: 0 6px 20px rgba(255, 172, 147, 0.3); /* Soft orange glow */
+    border-color: #ffac93;
+    box-shadow: 0 6px 20px rgba(255, 172, 147, 0.3);
 }
 
 .search-clear {
@@ -136,14 +139,14 @@ header.header {
 }
 
 .search-clear:hover {
-    color: #ff643b; /* Brighter orange on hover */
+    color: #ff643b;
     transform: translateY(-50%) rotate(90deg) scale(1.1);
 }
 
-/* UPDATED HERO SECTION */
+/* HERO SECTION */
 .hero {
     position: relative;
-    height: 70vh; /* Smaller hero height */
+    height: 70vh;
     min-height: 500px;
     overflow: hidden;
 }
@@ -165,19 +168,19 @@ header.header {
 
 .hero-content {
     position: absolute;
-    right: 0; /* Flush to right edge */
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 380px; /* Keep smaller width */
-    height: 420px; /* Keep smaller height */
-    background-color: hsl(44, 100%, 98%); /* Matches your beige body bg */
+    width: 380px;
+    height: 420px;
+    background-color: hsl(44, 100%, 98%); /* Matches body beige */
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 2;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-    border-radius: 40px 0 0 40px; /* Rounded on left side */
+    border-radius: 40px 0 0 40px; /* Rounded on the left side */
 }
 
 .hero-content h1 {
@@ -202,7 +205,7 @@ header.header {
 }
 
 .hero-btn {
-    align-self: start;
+    align-self: flex-start;
     background-color: #a2b850;
     color: #fff;
     padding: 12px 28px;
@@ -217,7 +220,7 @@ header.header {
     transform: translateY(-3px);
 }
 
-/* Main content adjustments – nicer paragraph styling */
+/* MAIN CONTENT – Nicely styled paragraphs with headings */
 .main-content {
     padding: 60px 20px;
     max-width: 900px;
@@ -226,7 +229,7 @@ header.header {
 
 .content-wrapper h2 {
     font-size: 28px;
-    color: #a2b850; /* Green accent for headings */
+    color: #a2b850; /* Green headings to match theme */
     margin-top: 50px;
     margin-bottom: 15px;
 }
@@ -238,7 +241,7 @@ header.header {
     margin-bottom: 30px;
 }
 
-/* Footer space */
+/* Footer */
 footer {
-    height: 50px; /* Extra buffer at the very bottom */
+    height: 40px;
 }
