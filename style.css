@@ -1,34 +1,31 @@
 /*
 Page layout for index.html
 Author: NaDari Cole
-Date:12/30/2025
+Date: 12/30/2025
 Code Type: css
-Filename: index_layout.css
+Filename: style.css  // Renamed to match your HTML link
 */
-charset "utf-8";
-{
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-}
-.wrapper {
-  width: 1170px;
-  margin: auto;
+
+@charset "utf-8";  /* Fixed: Added @ */
+
+* {  /* Fixed: Added universal selector */
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
 }
 
 body {
-  background: 
-    hsl(44, 100%, 98%);
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  position: relative;
+    background: hsl(44, 100%, 98%);  /* Light beige */
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
 }
 
 /* Header/Navigation */
 header.header {
-    background-color: #0f172a; 
-    padding: 15px 50px; /* Space inside header */
+    background-color: #0f172a;  /* Dark navy */
+    padding: 15px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +34,7 @@ header.header {
 }
 
 .logo img {
-    height: 40px; /* Adjust to match your logo size */
+    height: 40px;  /* Adjust as needed */
 }
 
 .nav-area {
@@ -49,20 +46,52 @@ header.header {
 }
 
 .nav-area li {
-    margin: 0 15px; /* Space between links */
+    margin: 0 15px;
 }
 
 .nav-area li a {
-    color: #a2b850;
+    color: #fff;  /* White text to match example */
     text-decoration: none;
-    font-family: 'Nunito', sans-serif; 
-    font-size: 16px; /* larger for better readability */
+    font-size: 16px;
     font-weight: 500;
     padding: 8px 0;
     transition: color 0.3s;
 }
 
 .nav-area li a:hover {
-    color: #ff643b; /* Light teal hover – matches the accent in "Sense" logo */
+    color: #a0f1ea;  /* Light teal hover, like example accent */
 }
 
+/* Book a Demo button – matches orange rounded style */
+.book-demo {
+    background-color: #ff643b;  /* Orange to match example */
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px;  /* Rounded pill */
+    transition: background-color 0.3s;
+}
+
+.book-demo:hover {
+    background-color: #ff855f;  /* Lighter orange on hover */
+}
+
+/* Optional: Style for article to match screenshot layout */
+article {
+    max-width: 800px;  /* Narrow for readability */
+    margin: 50px auto;  /* Center with top/bottom space */
+    padding: 0 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+article h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+article p {
+    margin-bottom: 25px;
+}
