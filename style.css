@@ -24,7 +24,7 @@ body {
 /* Header/Navigation */
 header.header {
     background-color: #a2b850; /* green */
-    padding: 25px 50px; /* Equal padding left/right, taller header */
+    padding: 25px 50px 25px 0; /* Top, right, bottom, LEFT=0 → no left padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,15 +34,14 @@ header.header {
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 20px; /* Small space from very left edge */
+    margin-left: 20px; /* Small room – */
 }
 
 .logo img {
-    height: 150px; /* current size */
+    height: 150px;
     width: auto;
     display: block;
 }
-
 /* Nav centering wrapper */
 .nav-center {
     flex: 1; /* Takes available space to center nav */
