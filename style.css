@@ -34,12 +34,12 @@ header.header {
 .logo {
     display: flex;
     align-items: center;
+    margin-left: 20px; /* Small space from very left edge */
 }
 
 .logo img {
-    height: 150px; /* logo size */
+    height: 150px; /* current size */
     width: auto;
-    margin-left: auto;
     display: block;
 }
 
