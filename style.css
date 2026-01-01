@@ -242,26 +242,27 @@ header.header {
 
 /* Footer */
 footer {
-    background-color: hsl(44, 100%, 98%); /* Matches your light beige body background */
-    color: #444; /* Darker text for better readability on beige */
+    padding: 60px 20px 40px; /* Space above and below the green strip */
+    background-color: hsl(44, 100%, 98%); /* Keeps body beige outside the strip */
+}
+
+.footer-bg {
+    background-color: #a2b850; /* Your nav green */
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px; /* More vertical padding for breathing room */
-    font-size: 16px;
-    line-height: 1.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* Perfect horizontal centering */
-    justify-content: center; /* Perfect vertical centering */
-    min-height: 120px;       /* Gives consistent height */
+    border-radius: 20px 20px 0 0; /* Optional: subtle rounded top corners for softness */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the strip if screen is wide */
 }
 
 .footer-content p {
-    margin: 8px 0;
-    max-width: 800px; /* Prevents text from stretching too wide on large screens */
+    color: #fff; /* White text on green */
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .footer-content p:first-child {
     font-weight: 600;
     font-size: 17px;
-    color: #333;
 }
