@@ -1,6 +1,6 @@
 // This file is for the index.html files search bar
 
-//Page layout for index.html
+// For index.html search bar
 //Author: NaDari Cole
 //Date: 12/31/2025
 //Code Type: js
