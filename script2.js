@@ -48,3 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Article Search Functionality
+const articleSearchInput = document.getElementById('article-search-input');
+const articleCards = document.querySelectorAll('.article-card');
+
+articleSearchInput.addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    articleCards.forEach(card => {
+        const title = card.querySelector('.article-title').textContent.toLowerCase();
+        const excerpt = card.querySelector('.article-excerpt').textContent.toLowerCase();
+        if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+});
