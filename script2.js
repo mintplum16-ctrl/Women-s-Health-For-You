@@ -49,19 +49,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('article-search-input');
-    const cards = document.querySelectorAll('.article-card');
-
-    searchInput.addEventListener('input', () => {
-        const term = searchInput.value.toLowerCase();
-        cards.forEach(card => {
-            const title = card.querySelector('.article-title').textContent.toLowerCase();
-            const excerpt = card.querySelector('.article-excerpt').textContent.toLowerCase();
-            const category = card.querySelector('.category-tag')?.textContent.toLowerCase() || '';
-            const matches = title.includes(term) || excerpt.includes(term) || category.includes(term);
-            card.classList.toggle('hidden', !matches);
-        });
-    });
-});
-
