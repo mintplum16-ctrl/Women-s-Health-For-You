@@ -318,6 +318,18 @@ header.header {
     animation: slideUp 0.5s ease;
 }
 
+.modal-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(-45deg, transparent 40%, #a2b850 40%, #a2b850 60%, transparent 60%);
+    cursor: se-resize;
+    pointer-events: none;
+}
+
 .modal-close {
     position: absolute;
     top: 20px;
