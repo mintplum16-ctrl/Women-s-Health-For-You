@@ -2,18 +2,18 @@
 <html>
 <head>
     <!--
-    This website was made by NaDari Cole. Please don't copy my code completly.
-    I will allow bits of my code to be copyed :).
+    This website was made by NaDari Cole. Please don't copy my code completely.
+    I will allow bits of my code to be copied :).
     Name: NaDari Cole
-    Date: 01/03/2026
+    Date: 12/32/2025
     Code Type: HTML5
     Filename: conditions.html
     Website Name: Health For You
     -->
     <meta charset="utf-8">
     <meta name="keywords" content="Health, Men, Women, Help, Real, Body" />
-    <title>Conditions | Health For You</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Conditions</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -23,11 +23,11 @@
         <div class="logo">
             <img src="images/HealthForYou_Logo.png" alt="Health For You Logo">
         </div>
-      
+       
         <div class="nav-center">
             <ul class="nav-area">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="conditions.html" class="active">Conditions</a></li>
+                <li><a href="./" class="active">Conditions</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="library.html">Library</a></li>
@@ -35,17 +35,19 @@
                 <li><a href="news.html">News</a></li>
             </ul>
         </div>
-        <!-- Minimalist Search Bar -->
+        <!-- Minimalist Search Bar for navigation -->
         <div class="search-bar-container">
             <span class="search-icon">🔍</span>
             <input type="search" class="search-input" placeholder="What is your curiosity?" aria-label="Search site">
             <button class="search-clear" aria-label="Clear search">✕</button>
         </div>
     </header>
-    <!-- New Hero Section -->
+    
+    <!-- Hero Section with fixed image path -->
     <section class="hero">
         <div class="hero-image">
-            <img src="images/hero2-bg.png" alt="Hospital Room"> <!-- This is the image for the hero background on the conditions page -->
+            <!-- Fixed: Added ./ to ensure proper path resolution -->
+            <img src="./images/hero2-bg.jpg" alt="Hospital Room">
         </div>
         <div class="hero-content">
             <h1>Conditions<br>
@@ -54,95 +56,140 @@
         </div>
     </section>
 
-    <!-- Page Search Bar – this searches only the articles on this page -->
-    <section class="page-search-section">
-        <div class="container">
-            <input type="text" id="article-search-input" placeholder="Search conditions, symptoms, or remedies..." aria-label="Search articles on this page">
-        </div>
-    </section>
-
-    <!-- Articles Grid – 3 per row, 6 total (2 rows) -->
-    <section class="articles-section" id="main-content">
-        <div class="container">
-            <div class="article-grid">
-                <!-- Article 1 -->
-                <div class="article-card" data-title="Stress Relief" data-content="Full article content for stress relief goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder1.jpg" alt="Stress Relief">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Natural Stress Relief</h3>
-                        <p class="article-excerpt">Gentle ways to calm anxiety and reduce daily stress with herbs and mindfulness.</p>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card" data-title="Digestive Health" data-content="Full article content for digestive health goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder2.jpg" alt="Digestive Health">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Improve Digestion Naturally</h3>
-                        <p class="article-excerpt">Herbs and foods to soothe bloating and support gut balance.</p>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card" data-title="Better Sleep" data-content="Full article content for better sleep goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder3.jpg" alt="Better Sleep">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Fall Asleep Faster</h3>
-                        <p class="article-excerpt">Herbal rituals and routines for restful nights.</p>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="article-card" data-title="Immune Boost" data-content="Full article content for immune boost goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder4.jpg" alt="Immune Boost">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Strengthen Immunity</h3>
-                        <p class="article-excerpt">Natural foods and herbs to support your body's defenses.</p>
-                    </div>
-                </div>
-
-                <!-- Article 5 -->
-                <div class="article-card" data-title="Energy Boost" data-content="Full article content for energy boost goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder5.jpg" alt="Energy Boost">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Combat Fatigue</h3>
-                        <p class="article-excerpt">Sustainable ways to increase daily energy levels.</p>
-                    </div>
-                </div>
-
-                <!-- Article 6 -->
-                <div class="article-card" data-title="Hormonal Balance" data-content="Full article content for hormonal balance goes here...">
-                    <div class="article-image">
-                        <img src="images/placeholder6.jpg" alt="Hormonal Balance">
-                    </div>
-                    <div class="article-info">
-                        <h3 class="article-title">Balance Hormones Naturally</h3>
-                        <p class="article-excerpt">Gentle support for hormonal health and well-being.</p>
-                    </div>
-                </div>
+    <!-- Articles Section with search and filter -->
+    <section class="articles-section">
+        <!-- Search bar specifically for articles -->
+        <div class="article-search-container">
+            <div class="article-search-wrapper">
+                <span class="article-search-icon">🔍</span>
+                <input type="search" class="article-search-input" placeholder="Search articles..." aria-label="Search articles">
+                <!-- X button to clear article search -->
+                <button class="article-search-clear" aria-label="Clear article search">✕</button>
             </div>
+            
+            <!-- Filter button that opens filter menu -->
+            <button class="filter-button" aria-label="Filter articles">
+                <span class="filter-icon">⚙️</span> Filter
+            </button>
+        </div>
+
+        <!-- Filter menu (hidden by default, appears when filter button is clicked) -->
+        <div class="filter-menu">
+            <h3>Filter by Category</h3>
+            <!-- Each checkbox filters articles by category -->
+            <!-- When adding more categories, copy the label structure below -->
+            <label class="filter-option">
+                <input type="checkbox" value="psychological" class="filter-checkbox">
+                <span>Psychological Wellness</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" value="chronic" class="filter-checkbox">
+                <span>Chronic Disorders</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" value="acute" class="filter-checkbox">
+                <span>Acute Conditions</span>
+            </label>
+            <!-- TO ADD MORE FILTERS: Copy a label block above and change the value and span text -->
+        </div>
+
+        <!-- Grid container for article cards (3 per row) -->
+        <div class="articles-grid">
+            <!-- Article Card 1 -->
+            <!-- Each article needs: data-category (for filtering), title, image, and description -->
+            <div class="article-card" data-category="psychological" data-title="Understanding Anxiety Disorders" data-content="This is the full article content about anxiety disorders. You can add multiple paragraphs here...">
+                <h3 class="article-title">Understanding Anxiety Disorders</h3>
+                <div class="article-image">
+                    <img src="./images/article1.jpg" alt="Anxiety article image">
+                </div>
+                <p class="article-description">Learn about the different types of anxiety disorders and coping mechanisms.</p>
+            </div>
+
+            <!-- Article Card 2 -->
+            <div class="article-card" data-category="chronic" data-title="Managing Diabetes" data-content="This is the full article content about managing diabetes. Include your detailed information here...">
+                <h3 class="article-title">Managing Diabetes</h3>
+                <div class="article-image">
+                    <img src="./images/article2.jpg" alt="Diabetes article image">
+                </div>
+                <p class="article-description">Essential tips for living well with diabetes and maintaining healthy blood sugar levels.</p>
+            </div>
+
+            <!-- Article Card 3 -->
+            <div class="article-card" data-category="acute" data-title="Common Cold Prevention" data-content="This is the full article content about cold prevention. Add your comprehensive guide here...">
+                <h3 class="article-title">Common Cold Prevention</h3>
+                <div class="article-image">
+                    <img src="./images/article3.jpg" alt="Cold prevention article image">
+                </div>
+                <p class="article-description">Effective strategies to boost your immune system and prevent seasonal illnesses.</p>
+            </div>
+
+            <!-- Article Card 4 -->
+            <div class="article-card" data-category="psychological" data-title="Depression Awareness" data-content="This is the full article content about depression. Write your detailed article content here...">
+                <h3 class="article-title">Depression Awareness</h3>
+                <div class="article-image">
+                    <img src="./images/article4.jpg" alt="Depression article image">
+                </div>
+                <p class="article-description">Recognizing signs of depression and finding appropriate support and treatment.</p>
+            </div>
+
+            <!-- Article Card 5 -->
+            <div class="article-card" data-category="chronic" data-title="Heart Health Essentials" data-content="This is the full article content about heart health. Include detailed information here...">
+                <h3 class="article-title">Heart Health Essentials</h3>
+                <div class="article-image">
+                    <img src="./images/article5.jpg" alt="Heart health article image">
+                </div>
+                <p class="article-description">Key lifestyle changes and medical insights for maintaining a healthy heart.</p>
+            </div>
+
+            <!-- Article Card 6 -->
+            <div class="article-card" data-category="acute" data-title="First Aid Basics" data-content="This is the full article content about first aid. Add your comprehensive guide here...">
+                <h3 class="article-title">First Aid Basics</h3>
+                <div class="article-image">
+                    <img src="./images/article6.jpg" alt="First aid article image">
+                </div>
+                <p class="article-description">Essential first aid techniques everyone should know for emergency situations.</p>
+            </div>
+
+            <!-- TO ADD MORE ARTICLES: Copy an article-card div above and update:
+                 - data-category (psychological, chronic, or acute)
+                 - data-title (the article title)
+                 - data-content (the full article text)
+                 - article-title text
+                 - image src
+                 - article-description text
+            -->
         </div>
     </section>
 
-    <!-- Modal Popup for Articles -->
-    <div id="article-modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-body"></div>
+    <!-- Pop-up modal for displaying article content -->
+    <!-- This appears when any article card is clicked -->
+    <div class="article-popup" id="articlePopup">
+        <!-- Resizable container for the popup window -->
+        <div class="popup-content" id="popupContent">
+            <!-- Header bar with pink/magenta color matching your design -->
+            <div class="popup-header">
+                <!-- Title displays the clicked article's title -->
+                <h2 class="popup-title" id="popupTitle">Article Title</h2>
+                <!-- Close button with hover and click animations -->
+                <button class="popup-close" id="popupClose" aria-label="Close article">✕</button>
+            </div>
+            <!-- Scrollable article body -->
+            <div class="popup-body" id="popupBody">
+                <p>Article content will appear here...</p>
+            </div>
+            <!-- Resize handles for dragging to resize the popup -->
+            <!-- Eight handles: corners and sides -->
+            <div class="resize-handle resize-top-left"></div>
+            <div class="resize-handle resize-top-right"></div>
+            <div class="resize-handle resize-bottom-left"></div>
+            <div class="resize-handle resize-bottom-right"></div>
+            <div class="resize-handle resize-top"></div>
+            <div class="resize-handle resize-bottom"></div>
+            <div class="resize-handle resize-left"></div>
+            <div class="resize-handle resize-right"></div>
         </div>
     </div>
-
+   
     <footer>
         <div class="footer-bg">
             <div class="footer-content">
@@ -151,12 +198,10 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        ↑
-    </button>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
 
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
