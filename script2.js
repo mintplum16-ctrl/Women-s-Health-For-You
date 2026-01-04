@@ -11,7 +11,7 @@
 // - Back to top button
 // - Soft pop sound on modal open (Frutiger Aero style chime)
 
-// Header search clear functionality
+// Header search clear
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
     const searchClear = document.querySelector('.search-clear');
@@ -32,10 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Page article search – filters the 6 article cards on this page
+// Article search (with clear button)
 const articleSearchInput = document.getElementById('article-search-input');
+const articleSearchClear = document.querySelector('.search-clear-article');
+const articleCards = document.querySelectorAll('.article-card');
 if (articleSearchInput) {
-    const articleCards = document.querySelectorAll('.article-card');
     articleSearchInput.addEventListener('input', function () {
         const term = this.value.toLowerCase();
         articleCards.forEach(card => {
@@ -49,39 +50,67 @@ if (articleSearchInput) {
         });
     });
 }
+if (articleSearchClear) {
+    articleSearchClear.addEventListener('click', function () {
+        articleSearchInput.value = '';
+        articleSearchInput.focus();
+        articleSearchInput.dispatchEvent(new Event('input'));
+    });
+}
 
-// Modal popup functionality
+// Filter menu toggle
+const filterBtn = document.querySelector('.filter-btn');
+const filterMenu = document.getElementById('filter-menu');
+if (filterBtn) {
+    filterBtn.addEventListener('click', function () {
+        filterMenu.style.display = filterMenu.style.display === 'block' ? 'none' : 'block';
+    });
+}
+const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+filterCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        const selectedCategories = Array.from(filterCheckboxes)
+            .filter(cb => cb.checked)
+            .map(cb => cb.dataset.category);
+        articleCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            if (selectedCategories.length === 0 || selectedCategories.includes(cardCategory)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+});
+
+// Modal functionality
 const modal = document.getElementById('article-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
 const closeBtn = document.querySelector('.modal-close');
 
-const openSound = new Audio('https://freesound.org/data/previews/757/757406_16633670-lq.mp3'); // Frutiger Aero style soft chime (free from freesound.org)
+const openSound = new Audio('sounds/open-chime.mp3'); // Download a Frutiger Aero chime MP3 and place in 'sounds/' folder
 
-document.querySelectorAll('.article-card').forEach(card => {
+articleCards.forEach(card => {
     card.addEventListener('click', function () {
-        modalTitle.textContent = this.dataset.title;
-        modalBody.innerHTML = this.dataset.content || '<p>Full article content coming soon...</p>'; // Replace with real content later
+        modalTitle.textContent = this.querySelector('.article-title').textContent;
+        modalBody.innerHTML = this.dataset.content; // Use data-content for full article
         modal.style.display = 'flex';
-        openSound.currentTime = 0;
-        openSound.play().catch(e => console.log('Sound play prevented:', e)); // Plays soft pop/chime
+        openSound.play();
     });
 });
 
-if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
-}
+closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
 
-// Close modal when clicking outside content
 window.addEventListener('click', function (e) {
     if (e.target === modal) {
         modal.style.display = 'none';
     }
 });
 
-// Back to top button
+// Back to top
 const backToTopButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', function () {
     if (window.scrollY > 300) {
@@ -92,8 +121,5 @@ window.addEventListener('scroll', function () {
 });
 
 backToTopButton.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
