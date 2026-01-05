@@ -2,12 +2,13 @@
 // Date: 12/31/2025
 // Filename: script2.js
 
-document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
     const searchClear = document.querySelector('.search-clear');
 
     function toggleClearButton() {
-        if (searchInput.value.length > 0 || searchInput === document.activeElement) {
+        if (searchInput.value.length > 0 || document.activeElement === searchInput) {
             searchClear.style.opacity = '1';
             searchClear.style.pointerEvents = 'all';
         } else {
@@ -40,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleClearButton();
 });
 
-// Page article search
 const articleSearchInput = document.getElementById('article-search-input');
 if (articleSearchInput) {
     const articleCards = document.querySelectorAll('.article-card');
@@ -58,7 +58,6 @@ if (articleSearchInput) {
     });
 }
 
-// Modal + sounds
 const modal = document.getElementById('article-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
@@ -92,7 +91,6 @@ window.addEventListener('click', function (e) {
     }
 });
 
-// Back to top
 const backToTopButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', function () {
     if (window.scrollY > 300) {
