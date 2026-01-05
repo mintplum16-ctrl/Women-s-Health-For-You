@@ -3,20 +3,19 @@
 // Filename: script2.js
 
 
-    document.addEventListener('DOMContentLoaded', function () {
+
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
     const searchClear = document.querySelector('.search-clear');
-
     function toggleClearButton() {
-        if (searchInput.value.length > 0 || document.activeElement === searchInput) {
-            searchClear.style.opacity = '1';
-            searchClear.style.pointerEvents = 'all';
+        if (searchInput.value.length > 0 || searchInput === document.activeElement) {
+            [searchClear.style](http://searchClear.style).opacity = '1';
+            [searchClear.style](http://searchClear.style).pointerEvents = 'all';
         } else {
-            searchClear.style.opacity = '0';
-            searchClear.style.pointerEvents = 'none';
+            [searchClear.style](http://searchClear.style).opacity = '0';
+            [searchClear.style](http://searchClear.style).pointerEvents = 'none';
         }
     }
-
     if (searchInput) {
         searchInput.addEventListener('input', toggleClearButton);
         searchInput.addEventListener('focus', toggleClearButton);
@@ -29,7 +28,6 @@
             }
         });
     }
-
     if (searchClear) {
         searchClear.addEventListener('click', function () {
             searchInput.value = '';
@@ -37,10 +35,9 @@
             toggleClearButton();
         });
     }
-
     toggleClearButton();
 });
-
+// Page article search
 const articleSearchInput = document.getElementById('article-search-input');
 if (articleSearchInput) {
     const articleCards = document.querySelectorAll('.article-card');
@@ -57,40 +54,37 @@ if (articleSearchInput) {
         });
     });
 }
-
+// Modal + sounds
 const modal = document.getElementById('article-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
 const closeBtn = document.querySelector('.modal-close');
 const openSound = new Audio('sounds/open.mp3');
 const closeSound = new Audio('sounds/close.mp3');
-
 document.querySelectorAll('.article-card').forEach(card => {
     card.addEventListener('click', function () {
         modalTitle.textContent = this.dataset.title;
         modalBody.innerHTML = this.dataset.content || '<p>Full article content coming soon...</p>';
-        modal.style.display = 'flex';
+        [modal.style](http://modal.style).display = 'flex';
         openSound.currentTime = 0;
-        openSound.play().catch(e => console.log('Open sound prevented:', e));
+        [openSound.play](http://openSound.play)().catch(e => console.log('Open sound prevented:', e));
     });
 });
-
 if (closeBtn) {
     closeBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
+        [modal.style](http://modal.style).display = 'none';
         closeSound.currentTime = 0;
-        closeSound.play().catch(e => console.log('Close sound prevented:', e));
+        [closeSound.play](http://closeSound.play)().catch(e => console.log('Close sound prevented:', e));
     });
 }
-
 window.addEventListener('click', function (e) {
-    if (e.target === modal) {
-        modal.style.display = 'none';
+    if ([e.target](http://e.target) === modal) {
+        [modal.style](http://modal.style).display = 'none';
         closeSound.currentTime = 0;
-        closeSound.play().catch(e => console.log('Close sound prevented:', e));
+        [closeSound.play](http://closeSound.play)().catch(e => console.log('Close sound prevented:', e));
     }
 });
-
+// Back to top
 const backToTopButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', function () {
     if (window.scrollY > 300) {
@@ -99,7 +93,6 @@ window.addEventListener('scroll', function () {
         backToTopButton.classList.remove('show');
     }
 });
-
 backToTopButton.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
