@@ -64,7 +64,7 @@ const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
 const closeBtn = document.querySelector('.modal-close');
 const openSound = new Audio('sounds/open.mp3');
-const closeSound = new Audio('sounds/close.mp3');
+const closeSound = new Audio('sounds/open.mp3');
 
 document.querySelectorAll('.article-card').forEach(card => {
     card.addEventListener('click', function () {
