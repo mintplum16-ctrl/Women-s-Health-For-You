@@ -1,6 +1,6 @@
 // Author: NaDari Cole
 // Date: 12/31/2025
-// Filename: script2.js
+// Filename: script3.js
 
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
